@@ -127,10 +127,10 @@ format.arguments_tag <- function(x, ...) {
 format.slot_tag <- function(x, ...) {
   names <- names(x$values)
   items <- str_c("\\item{", names, "}{", x$values, "}", collapse = "\n\n")
-  str_c("\\section{Slots}\n\n",
+  str_c("\\section{Slots}{\n\n",
     "\\itemize{\n", 
     str_wrap(items, width = 60, exdent = 2, indent = 2),
-    "\n}\n")
+    "\n}}\n")
 }
 
 
